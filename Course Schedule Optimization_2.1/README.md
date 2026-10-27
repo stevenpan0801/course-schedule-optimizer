@@ -7,11 +7,11 @@
 Python 3.10 或以上。在本文件所在目录打开终端：
 
 ```bash
-python3 -m pip install -r requirements.txt
+python3 -m pip install -r requirements-local.txt
 python3 -m streamlit run app.py
 ```
 
-PyCharm 用户应在项目所用的 Python 虚拟环境中执行以上命令。requirements.txt 是依赖列表，不是可运行脚本。
+PyCharm 用户应在项目所用的 Python 虚拟环境中执行以上命令。requirements-local.txt 是依赖列表，不是可运行脚本。
 
 ## 使用
 
@@ -83,3 +83,7 @@ python3 -m unittest test_optimizer -v
 本版沿用 2.0 的数据库（包括 CHI1000 组件修正）、排课算法与独立检查器，数据库内容未改动。新增页面回归检查覆盖方案切换、手动检查持久化、缺失组件、输入变化失效、无解与学分限制；额外测试了禁排表格的有效和倒置区间。
 
 验证方式：Streamlit AppTest 界面测试及 14 项核心测试通过。当前制作环境禁止绑定本地服务端口，因此未进行浏览器实机视觉验收。
+
+## Streamlit Cloud 部署
+
+仓库根目录的 `requirements.txt` 供云端安装依赖，避免含空格的子目录路径被安装器拆分。新建部署时可使用根目录 `streamlit_app.py`，它加载本目录的 2.1 应用。Python 版本选择 3.13。

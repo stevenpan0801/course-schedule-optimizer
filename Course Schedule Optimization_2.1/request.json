@@ -1,0 +1,12 @@
+{
+  "courses": ["AIE1001", "AIE1901", "MAT1001", "ENG1001", "CHI1000", "PED1113"],
+  "preferences": {
+    "early": 0,
+    "weekdays": {"5": 0},
+    "teachers": {},
+    "ban_early": false,
+    "banned_days": [],
+    "blocked": []
+  },
+  "timeout": 15
+}
